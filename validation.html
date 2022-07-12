@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Form Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body class="container justify-content-center d-flex border" >
+   <form class="needs-validation" novalidate >
+    <fieldset>
+     <legend>Personal Details</legend>
+        <div class="col-md-3 mt-2">
+      <label for="validationServer04" class="form-label">Salutation</label>
+      <select class="form-select" id="validationServer04" required>
+        <option selected disabled value="">None</option>
+        <option>Mr.</option>
+        <option>Ms.</option>
+      </select>
+      </div>
+         <div class="row">
+         <div class="mt-3">
+        <div>
+            <label for="exampleInputEmail1" class="form-label">First Name</label>
+            <input type="text" class="form-control" placeholder="Enter your first name" pattern="[a-zA-Z]*" required>
+            <div class="valid-feedback">First name is valid!</div>
+             <div class="invalid-feedback">Please enter Valid Name</div>
+        </div>
+      </div>
+      <div class="mt-3">
+        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+        <input type="text" class="form-control" placeholder="Enter your last name"  pattern="[a-zA-Z]*" required>
+        <div class="invalid-feedback">Input your Valid last name</div>
+        <div class="valid-feedback">Last Name is Valid</div>
+      </div>
+      </div>
+    <div class="mt-2 row">
+    <label for="validationServer04" class="form-label">Gender:</label>
+    <div class="form-check col-lg-3 col-md-3 col-sm-10 ms-3">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"required>
+      <label class="form-check-label" for="flexRadioDefault1">Male</label>
+      </div>
+           <div class="form-check col-lg-3 col-md-3 col-sm-10 ms-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+             <label class="form-check-label" for="flexRadioDefault1"> Female</label>
+        </div>
+    <div class="form-check col-lg-3 col-md-3 col-sm-10 ms-3">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+      <label class="form-check-label" for="flexRadioDefault1"> Others</label>
+    </div>
+        <div class="valid-feedback">You selected a gender!</div>
+        <div class="invalid-feedback">Please select a gender!</div>
+        </div>
+        <div class="mb-3 mt-2">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" placeholder="Enter your email"  pattern="[a-zA-Z0-9]*[@][a-zA-Z0-9]*(.com)"  required>
+          <div class="invalid-feedback">Input your Correct Email</div>
+          <div class="valid-feedback">Email is Valid</div>
+    </div>    
+        <div class="mb-3 mt-2">
+          <label for="exampleInputEmail1" class="form-label">Date of birth</label>
+          <input type="date" class="form-control" id="exampleInputdate of birth1" placeholder="dd-mm-yyyy"  aria-describedby="date of birthHelp" pattern="[0-9]{2}-[0-9]{2}-[1-9]{1}[0-9]{3}" required>
+          <div class="invalid-feedback">Input your Correct date of birth</div>
+          <div class="valid-feedback">date of birth is Valid</div>
+    </div> 
+           <label for="exampleInputEmail1" class="form-label">Adress</label>  
+        <div class="">
+          <textarea id="adress" name="adress" rows="4" cols="50" pattern="^[a-zA-Z0-9]*" required></textarea>
+          <div class="invalid-feedback">Input your Correct adress</div>
+          <div class="valid-feedback">adress is Valid</div>
+    </div>
+    <div>
+      <div>
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+  </fieldset>
+  </span>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src =  "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script>
+    
+  (function () {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms)
+      .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+      })
+ 
+    })()
+  
+  </script>
+</body>
+</html>
